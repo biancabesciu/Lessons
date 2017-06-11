@@ -1,0 +1,140 @@
+/*styling body*/
+body {
+    background-color: #e5e6eb;
+    font-family: 'Amiko', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e0d2d8;
+}
+
+/*styling header*/
+header{
+    background-image: url('../img/Live-Music.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 658px;
+}
+
+h1{
+    font-family: 'Metamorphous', cursive;
+    font-size: 70px;
+    float: left;
+    padding: 100px 0px 80px 330px;
+    color: #ffffff;
+}
+
+.title p{
+    float: left;
+    padding: 175px 0 80px 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/*styling nav*/
+nav{
+    border: 1px solid #12110d;
+    background-color: #12110d;
+}
+ul.nav{
+    margin: 0;
+    padding: 10px 10px;
+}
+
+.nav li{
+    display: inline;
+    list-style: none;
+    paddind:0;
+    margin: 0;
+}
+
+#music{
+    font-family: 'Metamorphous', cursive;
+    color: #e0d2d8;
+    font-size: 15px;
+    margin-left: 0;
+    padding: 0 10px 0 0px;
+}
+
+/*styling link*/
+a {
+    text-decoration: none;
+    color: #e0d2d8;
+    font-size: 10px;
+}
+
+a:hover{
+    color: #e04b42;
+}
+
+/*styling span*/
+#logo{
+    width: 70px;
+    height: 40px;
+}
+
+/*styling intro*/
+.intro{
+    margin: 20px;
+    padding: 0 0 350px 0;
+    width: 600px;
+    height: 20px;
+}
+
+.intro span{
+    font-family: 'Metamorphous', cursive;
+    color: #c7bbc9;
+}
+
+/*!*styling article*!*/
+article{
+    margin: 5px 0 0 0;
+    padding: 0 20px;
+    height: 20px;
+    color: #2a2623;
+}
+
+/*styyling content*/
+div.content{
+    padding-top: 40px;
+    text-align: center;
+}
+
+.content p{
+    font-family: 'Metamorphous', cursive;
+    font-size: 20px;
+    color: #e04b42;
+}
+
+ul.bands, ul.songs{
+    padding: 10px;
+    line-height: 25px;
+}
+
+/*removing bullets*/
+ul.bands li, ul.songs li{
+    list-style-type: none;
+}
+
+/*style img*/
+ul.concerts li{
+    list-style-type: none;
+}
+
+li img{
+    width: 500px;
+    display: block;
+    margin:0 auto;
+    padding: 10px;
+    border: 1px solid #c0c2ce;
+}
+
+/*styling text img*/
+ul.concerts li p{
+    font-family: 'Amiko', sans-serif;
+    margin: 20px;
+    padding: 0 300px 0 290px;
+    font-size: 15px;
+    text-align: center;
+}

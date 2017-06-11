@@ -1,0 +1,51 @@
+body {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-image: url('https://static.pexels.com/photos/2946/dawn-nature-sunset-trees.jpg');
+}
+
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+}
+
+p{
+    margin: 10px;
+}
+.first{
+    width:47%;
+    float:left;
+    postion: relative;
+}
+
+.second{
+    width:47%;
+    float:left;
+    right: 4%;
+    position: fixed;
+    background-color: #fbf0dd;
+}
+
+.third{
+    clear: both;
+    position: absolute;
+    bottom: -584px;
+
+}
+
+@media (max-width: 600px) {
+
+    .second{
+        position: static;
+    }
+
+    .third{
+        clear: both;
+        position: absolute;
+        bottom: -3208px;
+
+    }
+}

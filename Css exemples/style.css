@@ -1,0 +1,40 @@
+body{
+    background-color: honeydew;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1{
+    color: black;
+    margin: 10px 0 25px 0;
+    font-family: "Big Caslon";
+    text-align: center;
+}
+
+
+p{
+    padding-left: 50px;
+    padding-right: 50px;
+    color: lightslategray;
+}
+
+#intro{
+    color: black;
+}
+
+img{
+    width: 250px;
+    padding-left: 35px;
+}
+
+ul{
+    padding: 20px;
+}
+
+ul li{
+    display:inline;
+}
+
+#dif{
+    font-family: Damascus;
+}
