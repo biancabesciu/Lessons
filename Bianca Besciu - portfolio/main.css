@@ -1,0 +1,262 @@
+/*styling content*/
+body {
+    background-color: #fff;
+    font-family: "HelveticaLTStd-Roman", Arial, sans-serif;
+    font-size: 18px;
+    color: honeydew;
+}
+
+#header {
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    z-index: 2;
+    position: relative;
+}
+
+.container-fluid {
+    padding: 106px 15px 0;
+    margin: -9px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 5px 12px;
+    margin: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.element{
+    margin: 34px 28px;
+    padding-top: 14px;
+    border-top: 1px solid;
+}
+
+/*making the burger menu*/
+.sidebar{
+    position: fixed;
+    left: 120px;
+    top: 84px;
+    width: 114px;
+    z-index: 1002;
+    display: none;
+    text-align: left;
+    background-color: rgba(0,0,0, 0.1);
+}
+
+.sidebar a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar a:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+.sidebar li {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    list-style: none;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.toggle{
+    text-decoration: none;
+    font-size: 30px;
+    color: honeydew;
+    position: fixed;
+    left: 73px;
+    top: 100px;
+    transition: all 0.3s ease 0s;
+    z-index: 1000;
+    padding-left: 10px;
+}
+
+.toggle-off{
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    transition: all 0.3s ease 0s;
+    display: none;
+}
+
+#toggle-menu{
+    display: none;
+}
+
+#toggle-menu:checked ~ .sidebar{
+    display: block;
+}
+
+#toggle-menu:checked ~.toggle-off{
+    display: block;
+}
+
+.toggle:hover{
+    transform: scale(1.1);
+}
+
+/*styling profile img*/
+.img-circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 74px;
+}
+
+/*styling col*/
+.col-sm-4 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*styling social btn*/
+a .btn-social-icon {
+    color: #ffffff;
+}
+
+.btn-social-icon {
+    position: relative;
+    transition: all 0.3s ease 0s;
+    top: 31px;
+    display: inline-block;
+    font-style: normal;
+    font-size: 0.9em;
+    font-weight: normal;
+    background-color: #61474a;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-social-icon:hover{
+    transform: scale(1.1);
+}
+
+.btn-social-icon>:first-child {
+    background-color: #61474a;
+    font-size: 1.3em;
+}
+
+.social li {
+    list-style-type: none;
+    display: inline;
+    font-size: 1.5em;
+    margin-left: 1em;
+    text-align: right;
+}
+
+/*styling cv/portfolio btn*/
+p{
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.ghost-button {
+    color: honeydew;
+    background: none;
+    border: 1px solid honeydew;
+    margin-top: 59px;
+    padding: 9px 30px;
+    font-size: 24px;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    font-family: "HelveticaLTStd-Roman", Arial, sans-serif;
+    min-width: 120px;
+    text-transform: uppercase;
+}
+
+.ghost-button:hover{
+
+    transform: scale(1.1);
+}
+/*styling different media*/
+@media only screen and (max-width: 1280px) {
+    #header {
+        background: url("img/cover1.jpg") top center no-repeat !important;
+        background-size: cover;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .col-sm-4 {
+        width: 33.33%;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: antiquewhite;
+    }
+
+    #header {
+        background: url("img/cover1.jpg") top center no-repeat !important;
+        background-size: cover;
+        height: 600px;
+    }
+
+    .sidebar a {
+        display: inline;
+    }
+
+    .profile {
+        margin-top: -30px;
+    }
+
+    .btn-social-icon{
+        border-radius: 5px;
+        border: 1px solid #61474a;
+    }
+
+    .hde-social {
+        margin: 36px 24px -6px 0;
+        text-align: center;
+    }
+
+    .m-button {
+        margin-top: 3em !important;
+    }
+
+    .ghost-button {
+        margin: 10px;
+        text-align: center;
+        border-radius: 5px;
+        border-color: #5b4245;
+        background: #5b4245;
+    }
+
+    .toggle, .toggle-off {
+        display: none;
+    }
+
+}
