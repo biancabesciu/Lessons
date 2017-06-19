@@ -12,6 +12,7 @@ h1{
 
 h2 {
     line-height: 35px;
+    float: left;
 }
 
 h3{
@@ -53,9 +54,9 @@ span{
 /*styling img*/
 .profile{
     position: absolute;
-    float:right;
+    float: left;
     width:200px;
-    padding: 160px;
+    padding: 215px 850px;
 }
 
 li img {
