@@ -8,14 +8,14 @@ body {
 
 #header {
     text-align: center;
-    padding-top: 4em;
+    padding-top: 52px;
     padding-bottom: 2em;
     z-index: 2;
     position: relative;
 }
 
 .container-fluid {
-    padding: 106px 15px 0;
+    padding: 52px 15px 0;
     margin: -9px;
 }
 
@@ -34,6 +34,7 @@ div {
 
 a {
     text-decoration: none;
+    color: honeydew;
 }
 
 ul {
@@ -87,7 +88,7 @@ ul {
     position: fixed;
     left: 73px;
     top: 100px;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease-in-out 0s;
     z-index: 1000;
     padding-left: 10px;
 }
@@ -99,7 +100,7 @@ ul {
     left: 0;
     bottom: 0;
     z-index: 1000;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease-in-out 0s;
     display: none;
 }
 
@@ -135,13 +136,13 @@ ul {
 }
 
 /*styling social btn*/
-a .btn-social-icon {
+.btn-social-icon a {
     color: #ffffff;
 }
 
 .btn-social-icon {
     position: relative;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease-in-out 0s;
     top: 31px;
     display: inline-block;
     font-style: normal;
@@ -154,6 +155,7 @@ a .btn-social-icon {
 
 .btn-social-icon:hover{
     transform: scale(1.1);
+    color: honeydew;
 }
 
 .btn-social-icon>:first-child {
@@ -188,16 +190,29 @@ p{
     font-weight: normal;
     display: inline-block;
     text-decoration: none;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease-in-out 0s;
     font-family: "HelveticaLTStd-Roman", Arial, sans-serif;
     min-width: 120px;
     text-transform: uppercase;
 }
 
 .ghost-button:hover{
-
     transform: scale(1.1);
+    color: honeydew;
+    text-decoration: none;
 }
+
+/*!*styling carousel*!*/
+/*#carousel{*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+
+/*.img-fluid{*/
+    /*width: 1227px;*/
+    /*height: 579px;*/
+/*}*/
+
 /*styling different media*/
 @media only screen and (max-width: 1280px) {
     #header {
@@ -238,6 +253,9 @@ p{
         border: 1px solid #61474a;
     }
 
+    .element{
+       margin: 56px 28px 34px;
+    }
     .hde-social {
         margin: 36px 24px -6px 0;
         text-align: center;
