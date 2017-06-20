@@ -1,6 +1,6 @@
 /*styling content*/
 body {
-    background-color: #fff;
+    background-color: #5b4245;
     font-family: "HelveticaLTStd-Roman", Arial, sans-serif;
     font-size: 18px;
     color: honeydew;
@@ -15,7 +15,9 @@ body {
 }
 
 .container-fluid {
-    padding: 52px 15px 0;
+    padding-top: 0;
+    padding-left: 9px;
+    padding-right: 9px;
     margin: -9px;
 }
 
@@ -85,9 +87,9 @@ ul {
     text-decoration: none;
     font-size: 30px;
     color: honeydew;
-    position: fixed;
+    position: absolute;
     left: 73px;
-    top: 100px;
+    top: 38px;
     transition: all 0.3s ease-in-out 0s;
     z-index: 1000;
     padding-left: 10px;
@@ -176,8 +178,8 @@ p{
     display: block;
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
 }
 
 .ghost-button {
@@ -202,16 +204,25 @@ p{
     text-decoration: none;
 }
 
-/*!*styling carousel*!*/
-/*#carousel{*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-/*}*/
+/*!*styling carousel indicators*!*/
+.carousel-indicators li{
+    border: honeydew;
+    background-color: honeydew;
+}
 
-/*.img-fluid{*/
-    /*width: 1227px;*/
-    /*height: 579px;*/
-/*}*/
+.carousel-indicators .active{
+    border: honeydew;
+    background-color: honeydew;
+}
+
+/*pushing carousel indicators outside the slide*/
+.carousel-indicators {
+    bottom:-50px;
+}
+
+.carousel-inner {
+    margin-bottom:50px;
+}
 
 /*styling different media*/
 @media only screen and (max-width: 1280px) {
@@ -229,7 +240,7 @@ p{
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
     body {
         background-color: antiquewhite;
     }
@@ -254,7 +265,7 @@ p{
     }
 
     .element{
-       margin: 56px 28px 34px;
+       margin: 56px 28px 25px;
     }
     .hde-social {
         margin: 36px 24px -6px 0;
@@ -265,16 +276,13 @@ p{
         margin-top: 3em !important;
     }
 
-    .ghost-button {
-        margin: 10px;
-        text-align: center;
-        border-radius: 5px;
-        border-color: #5b4245;
-        background: #5b4245;
-    }
-
-    .toggle, .toggle-off {
+    .toggle, .toggle-off, .ghost-button {
         display: none;
     }
 
+    .container-fluid {
+        padding-left: 9px;
+        padding-right: 1px;
+        margin: -9px;
+    }
 }
