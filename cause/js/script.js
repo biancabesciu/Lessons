@@ -12,7 +12,7 @@ function validateName(field) {
         document.getElementById(field).style.background = '#ccffcc';
 
         //hide error prompt
-        document.getElementById(field + 'name-error').style.display = "none";
+        document.getElementById(field).style.display = "none";
         return true;
     } else {
 
@@ -20,7 +20,7 @@ function validateName(field) {
         document.getElementById(field).style.background = '#e35152';
 
         //show error prompt
-        document.getElementById(field + 'name-error').style.display = "block";
+        document.getElementById(field).style.display = "block";
         return false;
     }
 }
@@ -43,9 +43,6 @@ function validateEmail(email){
 
         // if false change the box background to red
         document.getElementById('email').style.background ='#e35152';
-
-        //show error prompt
-        document.getElementById(email + 'email-error').style.display = "block";
         return false;
     }
 }
@@ -59,7 +56,7 @@ function validateSelect(x){
         document.getElementById(x).style.background ='#ccffcc';
 
         //hide error prompt
-        document.getElementById(x + 'country-error').style.display = "none";
+        document.getElementById(x + 'Error').style.display = "none";
         return true;
     }else{
 
