@@ -12,7 +12,7 @@ function validateName(field) {
         document.getElementById(field).style.background = '#ccffcc';
 
         //hide error prompt
-        document.getElementById(field).style.display = "none";
+        document.getElementById(field + '-error').style.display = "none";
         return true;
     } else {
 
@@ -20,7 +20,7 @@ function validateName(field) {
         document.getElementById(field).style.background = '#e35152';
 
         //show error prompt
-        document.getElementById(field).style.display = "block";
+        document.getElementById(field + '-error').style.display = "block";
         return false;
     }
 }
