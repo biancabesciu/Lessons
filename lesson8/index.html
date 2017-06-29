@@ -6,23 +6,57 @@
         <title>JavaScript DOM Manipulation</title>
     </head>
     <body>
-        <h1>Calculator</h1>
+    <html>
 
-        <div id="calculator">
-            <!-- Screen and clear key -->
-            <div class="top">
-                <span class="clear">C</span>
-                <div class="screen"></div>
-            </div>
+    <head>
+        <title>Form Validation</title>
 
-            <div class="keys">
-                <!-- operators and other keys -->
-                
-            </div>
-        </div>
+        <script type="text/javascript">
+            <!--
+            // Form validation code will come here.
+            //-->
+        </script>
 
-        <button id="event-button" onclick="buttonHasBeenClicked()">Click me</button>
+    </head>
 
+    <body>
+    <form action="" name="myForm" onsubmit="return(validate());">
+        <table cellspacing="2" cellpadding="2" border="1">
+
+            <tr>
+                <td align="right">Name</td>
+                <td><input type="text" name="Name" /></td>
+            </tr>
+
+            <tr>
+                <td align="right">EMail</td>
+                <td><input type="text" name="EMail" onsubmit="return(validateEmail());"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Zip Code</td>
+                <td><input type="text" name="Zip" /></td>
+            </tr>
+
+            <tr>
+                <td align="right">Country</td>
+                <td>
+                    <select name="Country">
+                        <option value="-1" selected>Choose a country</option>
+                        <option value="1">Romania</option>
+                        <option value="2">UK</option>
+                        <option value="3">USA</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right"></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+
+        </table>
+    </form>
 
 
     <script src="script.js"></script>
