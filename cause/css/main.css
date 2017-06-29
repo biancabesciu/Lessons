@@ -1,0 +1,57 @@
+/*Donation page--------------------------------------------------------*/
+
+/*styling h2 - donation details*/
+h2.donation-title {
+    padding-left: 15px;
+}
+
+/*styling form*/
+.personal-details {
+    padding: 20px;
+    background: #9acfea;
+    color: #000;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.personal-details label,
+.personal-details input,
+.personal-details button {
+    border: 0;
+    margin-bottom: 3px;
+    display: block;
+    width: 100%;
+}
+
+.personal-details input {
+    height: 25px;
+    line-height: 25px;
+    background: #fff;
+    color: #000;
+    padding: 0 6px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.personal-details button {
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    background: #1b6d85;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 300px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.personal-details .error, .success {
+    display: none;
+    color: #ff0000;
+}
+
+.asterisk{
+    color: #ff0000;
+}
