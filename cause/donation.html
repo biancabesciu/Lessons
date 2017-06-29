@@ -80,18 +80,11 @@
                         <h2>Personal details</h2>
                         <form action="" class="required personal-details" onsubmit="return validateForm()">
 
-                            <label for="firstName">First name
+                            <label for="name">Name
                                 <span class="asterisk" aria-hidden="true">*</span>
                             </label>
-                            <input type="text" name="firstName" id="firstName" value="" onblur="validate('firstName')">
-                            <span id="firstName-error" class="error">Please enter your first name</span>
-                            <br class="clearing">
-
-                            <label for="surname">Surname
-                                <span class="asterisk" aria-hidden="true">*</span>
-                            </label>
-                            <input type="text" class="med" name="surname" id="surname" value="" onblur="validate('surname')">
-                            <span id="surname-error" class="error">Please enter your  surname</span>
+                            <input type="text" name="name" id="name" value="" onblur="validateName('name')">
+                            <span id="name-error" class="error">Please enter your name</span>
                             <br class="clearing">
 
                             <label for="email">Email

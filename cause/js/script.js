@@ -1,24 +1,27 @@
 // Personal-details form validation ---------------------------------------->
 
-// Validating first name fields
-function validate(field) {
+// Validating name fields
+function validateName(field) {
 
-    // set of rules for the input field
+    // validation rule
     let re = /[A-Za-z -']$/;
 
     if (re.test(document.getElementById(field).value)) {
 
         // if true change the box background to green
         document.getElementById(field).style.background = '#ccffcc';
+
+        //hide error prompt
+        document.getElementById(field + 'name-error').style.display = "none";
         return true;
     } else {
 
         // if false change the box background to red
         document.getElementById(field).style.background = '#e35152';
 
-        //invalid first name
-        document.getElementById(field + 'Error').style.display = "block";
-        document.getElementById(field + 'Error').style.display = "none";
+        //show error prompt
+        document.getElementById(field + 'name-error').style.display = "block";
+
         return false;
     }
 }
@@ -33,12 +36,17 @@ function validateEmail(email){
 
         // if true change the box background to green
         document.getElementById('email').style.background ='#ccffcc';
+
+        //hide error prompt
         document.getElementById('email-error').style.display = "none";
         return true;
     }else{
 
         // if false change the box background to red
         document.getElementById('email').style.background ='#e35152';
+
+        //show error prompt
+        document.getElementById(email + 'email-error').style.display = "block";
         return false;
     }
 }
@@ -50,7 +58,9 @@ function validateSelect(x){
 
         // if true change the box background to green
         document.getElementById(x).style.background ='#ccffcc';
-        document.getElementById(x + 'Error').style.display = "none";
+
+        //hide error prompt
+        document.getElementById(x + 'country-error').style.display = "none";
         return true;
     }else{
 
@@ -67,22 +77,21 @@ function validateForm() {
     //Set error catcher
     let error = 0;
 
-    // Check first name
-    if(!validate('firstName')){
-        document.getElementById('firstName-error').style.display = "block";
+    // Check name
+    if(!validateName('name')){
+        document.getElementById('name-error').style.display = "block";
         error++;
     }
-
-    // Check  surname
-    if(!validate('surname')){
-        document.getElementById('surname-error').style.display = "block";
-        error++;
-    }
-
 
     // Validate email
     if(!validateEmail(document.getElementById('email').value)){
         document.getElementById('email-error').style.display = "block";
+        error++;
+    }
+
+    //Validate select box
+    if(!validateSelect('country')) {
+        document.getElementById('country-error').style.display = "block";
         error++;
     }
 
