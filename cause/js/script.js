@@ -21,7 +21,6 @@ function validateName(field) {
 
         //show error prompt
         document.getElementById(field + 'name-error').style.display = "block";
-
         return false;
     }
 }
