@@ -1,12 +1,7 @@
 /*Donation page--------------------------------------------------------*/
 
-/*styling h2 - donation details*/
-h2.donation-title {
-    padding-left: 15px;
-}
-
 /*styling form*/
-.personal-details {
+.wraperForm {
     padding: 20px;
     background: #9acfea;
     color: #000;
@@ -15,6 +10,16 @@ h2.donation-title {
     border-radius: 4px;
 }
 
+/*styling donation-details label*/
+input[type="radio"], input[type="checkbox"]{
+    margin-left: 20px;
+}
+
+#moneyValue1{
+    margin-left: 0;
+}
+
+/*styling personal-details*/
 .personal-details label,
 .personal-details input,
 .personal-details button {
@@ -47,7 +52,7 @@ h2.donation-title {
     cursor: pointer;
 }
 
-.personal-details .error, .success {
+.donationPage .error {
     display: none;
     color: #ff0000;
 }

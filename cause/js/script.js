@@ -1,5 +1,23 @@
-// Personal-details form validation ---------------------------------------->
+// Donation page form validation ---------------------------------------->
 
+//Donation radio buttons
+//Validate radio buttons
+function validateRadio() {
+    const radioChecked = document.querySelector('input[name="amount"]:checked');
+
+    if (radioChecked) {
+
+        //hide error prompt
+        document.getElementById('radio-error').style.display = "none";
+        return true;
+    } else {
+        //show error prompt
+        document.getElementById('radio-error').style.display = "block";
+        return false;
+    }
+}
+
+//Personal details
 // Validating name fields
 function validateName(field) {
 
@@ -56,7 +74,7 @@ function validateSelect(x){
         document.getElementById(x).style.background ='#ccffcc';
 
         //hide error prompt
-        document.getElementById(x + 'Error').style.display = "none";
+        document.getElementById(x + '-error').style.display = "none";
         return true;
     }else{
 
@@ -72,6 +90,12 @@ function validateForm() {
 
     //Set error catcher
     let error = 0;
+
+    // Validate radio buttons
+    if(!validateRadio(document.querySelector('input[name="amount"]'))) {
+        document.getElementById('radio-error').style.display = "block";
+        error++;
+    }
 
     // Check name
     if(!validateName('name')){
@@ -96,3 +120,10 @@ function validateForm() {
         return false;
     }
 }
+
+window.onload = function() {
+
+    document.getElementsByTagName('form')[0].onsubmit = function() {
+        return validateForm();
+    };
+};
