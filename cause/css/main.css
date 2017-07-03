@@ -74,7 +74,7 @@
 }
 
 /*Backgroung img - parallax effect*/
-.bgImg-1, .bgImg-2, .bgImg-3, .bgImg-4, .bgImg-5 {
+.bgImg-1, .bgImg-2, .bgImg-3, .bgImg-4, .bgImg-5, .bgImg-6, .bgImg-7 {
     position: relative;
     opacity: 0.65;
     background-attachment: fixed;
@@ -99,12 +99,12 @@
 }
 
 .bgImg-4 {
-    background-image: url("");
+    background-image: url("../img/DSCF6557.JPG");
     min-height: 600px;
 }
 
 .bgImg-5 {
-    background-image: url("../img/simon-pierce-1270735.jpg");
+    background-image: url("../img/Islanda_2015_1778_resize.JPG");
     min-height: 600px;
 }
 
