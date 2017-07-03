@@ -74,7 +74,8 @@
 }
 
 /*Backgroung img - parallax effect*/
-.bgImg-1, .bgImg-2, .bgImg-3, .bgImg-4, .bgImg-5, .bgImg-6, .bgImg-7, .bgImg-8 {
+.bgImg-1, .bgImg-2, .bgImg-3, .bgImg-4, .bgImg-5, .bgImg-6, .bgImg-7, .bgImg-8,
+.bgImg-9 {
     position: relative;
     opacity: 0.65;
     background-attachment: fixed;
@@ -124,6 +125,11 @@
     min-height: 600px;
 }
 
+.bgImg-9 {
+    background-image: url("../img/maxresdefault.jpg");
+    min-height: 600px;
+}
+
 
 /*Styling title and subtitle*/
 
@@ -158,7 +164,7 @@
 
 .inner-text {
     width: 700px;
-    height: 109px;
+    height: 200px;
     margin: 0 200px 0;
     padding: 20px;
     text-align: center;
