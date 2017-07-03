@@ -1,4 +1,12 @@
 /*---------------------------------------------------------Home page--------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+
+
 
 /************Navigation bar*******************/
 
@@ -17,11 +25,27 @@
 
 /*Stying nav buttons*/
 
-.button-group {
-    float: none;
+.button {
+    position: relative;
+    cursor: pointer;
+    border: 0 solid;
+    text-align: center;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    transition:background-color 300ms ease-out;
 }
 
+.button-group {
+    float: none;
+    padding-top: 23px;
+}
+
+.homePage{
+    float: right;
+    padding-right: 30px;
+}
 .button-group li {
+    display: inline-block;
     padding-top: 3%;
     margin: 0 .5rem;
 }
@@ -31,6 +55,7 @@
     width: 7rem;
     padding: 20px 30px;
     background-color: #ccc;
+    text-decoration: none;
 }
 
 .button-group a:hover {
@@ -65,26 +90,38 @@
 
 .bgImg-2 {
     background-image: url("../img/Corbis-RF-stock-reef-fish-scuba-diver-ocean.jpg");
-    min-height: 400px;
+    min-height: 600px;
 }
 
 .bgImg-3 {
-    background-image: url("../img/turtle.jpg");
-    min-height: 400px;
+    background-image: url("../img/splash-11.jpg");
+    min-height: 600px;
 }
 
 .bgImg-4 {
-    background-image: url("../img/splash-11.jpg");
-    min-height: 400px;
+    background-image: url("");
+    min-height: 600px;
 }
 
 .bgImg-5 {
     background-image: url("../img/simon-pierce-1270735.jpg");
-    min-height: 400px;
+    min-height: 600px;
+}
+
+.bgImg-6 {
+    background-image: url("../img/simon-pierce-1270735.jpg");
+    min-height: 600px;
+}
+
+.bgImg-7 {
+    background-image: url("../img/turtle.jpg");
+    min-height: 600px;
 }
 
 
+
 /*Styling title and subtitle*/
+
 .caption {
     position: absolute;
     left: 0;
@@ -94,15 +131,41 @@
     color: #fff;
 }
 
-.caption h1, .caption h2 {
+.caption h1, .caption .subtitle {
     text-transform: uppercase;
+    font-weight: 700;
     color: #fff;
     padding: 18px;
-    font-size: 25px;
     letter-spacing: 10px;
     z-index: 1;
     display: block;
 
+}
+
+.caption h1 {
+    font-size: 40px;
+}
+
+.caption .subtitle{
+    letter-spacing: 0;
+    font-size: 30px;/*caption bgImg2*/
+}
+
+.inner-text {
+    width: 700px;
+    height: 109px;
+    margin: 0 200px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.inner-text p {
+    width: 700px;
+    height: 109px;
+    padding-left: 85px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 22px;
 }
 
 h3 {
