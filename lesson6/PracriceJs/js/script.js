@@ -6,30 +6,30 @@ score ++;
 document.getElementById('result').innerText = user + ' your score is ' + score + ' points';
 
 
-//Name formatter
-let name = "bIanca beSciu";
-let split = name.split(" ");
-let name1 = split[0];
-let name2 = split[1];
-let formettedName1 = name1.slice(0,1).toUpperCase() + name1.slice(1).toLowerCase();
-let formettedName2 = name2.slice(0,1).toUpperCase() + name2.slice(1).toLowerCase();
-let formattedFullName = formettedName1 + " " + formettedName2;
+// //Name formatter
+// let name = "bIanca beSciu";
+// let split = name.split(" ");
+// let name1 = split[0];
+// let name2 = split[1];
+// let formettedName1 = name1.slice(0,1).toUpperCase() + name1.slice(1).toLowerCase();
+// let formettedName2 = name2.slice(0,1).toUpperCase() + name2.slice(1).toLowerCase();
+// let formattedFullName = formettedName1 + " " + formettedName2;
+//
+// document.write(formattedFullName);
 
-document.write(formattedFullName);
-
-//Functions
-let scores = 0;
-let lives = 10;
-let gameOver = false;
-
-function lifeLost() {
-    scores = 0;
-    lives--;
-    gameOver = true;
-    document.write("<h2>Game over, you have " + lives + " lives left</h2>")
-}
-lifeLost();
-lifeLost();
+// //Functions
+// let scores = 0;
+// let lives = 10;
+// let gameOver = false;
+//
+// function lifeLost() {
+//     scores = 0;
+//     lives--;
+//     gameOver = true;
+//     document.write("<h2>Game over, you have " + lives + " lives left</h2>")
+// }
+// lifeLost();
+// lifeLost();
 
 //
 // //Random number
@@ -85,25 +85,44 @@ lifeLost();
 //     document.write("Careful, you are driving at speed limit!");
 // }
 
-//Age checker
-let minimumAge = 18;
-let currentAge = 18;
-
-if (currentAge < minimumAge) {
-    document.write('Please, come back when you are 18')
-} else if (currentAge >= 18 && currentAge <= 25) {
-    document.write("Please, provide ID")
-} else {
-    document.write('You can enter!')
-}
-
-
+// //Age checker
+// let minimumAge = 18;
+// let currentAge = 18;
+//
+// if (currentAge < minimumAge) {
+//     document.write('Please, come back when you are 18')
+// } else if (currentAge >= 18 && currentAge <= 25) {
+//     document.write("Please, provide ID")
+// } else {
+//     document.write('You can enter!')
+// }
 
 
+// //While loop
+// let foods = ["pasta", "pizza", "fish"];
+// let i = 0;
+//
+// while(foods[i]) {
+//     document.write(foods[i] + '<br>');
+//     i++
+// }
+
+// //Do while loops
+// let i = 1;
+//
+// do {
+//     document.write(i + '<br>');
+//     i++
+// }
+// while(i > 10);
 
 
-
-
+// //For loop
+// let i;
+//
+// for (i = 1; i < 10; i++) {
+//    document.write(i + '<br>');
+//  }
 
 
 

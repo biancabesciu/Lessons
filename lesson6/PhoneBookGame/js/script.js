@@ -1,24 +1,6 @@
-
-let randomNumber = Math.random() * 10;
-randomNumber = Math.ceil(randomNumber);
-
-
- function higher() {
-    if (randomNumber > 5) {
-        document.getElementById('textField').innerText = 'You win, your guessed number was ' + randomNumber;
-    } else {
-        document.getElementById('textField').innerText = 'You lose, your guessed number was ' + randomNumber;
-    }
- }
-
-function lower() {
-     if (randomNumber <= 5) {
-         document.getElementById('textField').innerText = 'You win, your guessed number was ' + randomNumber;
-    } else {
-         document.getElementById('textField').innerText = 'You lose, your guessed number was ' + randomNumber;
-     }
- }
-
- function reset() {
-    window.location.reload();
- }
+let names = ["Ioana", "Lorena", "Vali", "Ramona", "Adela", "Zeno", "Paul"];
+let i;
+for(i = 0; i < names.length; i++) {
+    names.sort();
+    document.write("<pre>" + (i+1) + ":"+ names[i] + "</pre>");
+}
