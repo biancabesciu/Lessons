@@ -1,9 +1,9 @@
 //User challenge score
-let user = "Bianca";
-let score = 0;
-score ++;
-
-document.getElementById('result').innerText = user + ' your score is ' + score + ' points';
+// let user = "Bianca";
+// let score = 0;
+// score ++;
+//
+// document.getElementById('result').innerText = user + ' your score is ' + score + ' points';
 
 
 // //Name formatter
@@ -124,7 +124,17 @@ document.getElementById('result').innerText = user + ' your score is ' + score +
 //    document.write(i + '<br>');
 //  }
 
+//Manipulating elements
+let newElement = document.createElement("div");
+newElement.id = "myId";
 
+let addText = document.createTextNode("new text string");
+
+newElement.appendChild(addText);
+
+let newContent = document.getElementById("title");
+
+document.body.insertBefore(newElement, newContent);
 
 
 
