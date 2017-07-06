@@ -1,5 +1,5 @@
 /*---------------------------------------------------------Home page--------------------------------------------------------------------*/
-* {
+body {
     margin: 0;
     padding: 0;
     z-index: 0;
@@ -75,7 +75,7 @@
 
 /*Backgroung img - parallax effect*/
 .bgImg-1, .bgImg-2, .bgImg-3, .bgImg-4, .bgImg-5, .bgImg-6, .bgImg-7, .bgImg-8,
-.bgImg-9 {
+.bgImg-9, .bgImg-10, .bgImg-11, .bgImg-12 {
     position: relative;
     opacity: 0.65;
     background-attachment: fixed;
@@ -127,6 +127,21 @@
 
 .bgImg-9 {
     background-image: url("../img/maxresdefault.jpg");
+    min-height: 600px;
+}
+
+.bgImg-10 {
+    background-image: url("../img/b81a9896443bff81333d02191d6be1b2.jpg");
+    min-height: 600px;
+}
+
+.bgImg-11 {
+    background-image: url("../img/life-coaching-1.jpg");
+    min-height: 600px;
+}
+
+.bgImg-12 {
+    background-image: url("../img/04dfc031933151b28c6757d0324f584b.jpg");
     min-height: 600px;
 }
 
@@ -194,6 +209,58 @@ h3 {
 }
 
 
+/*Styling footer*/
+
+.footer-social {
+    display: block;
+    padding: 4rem 0;
+    margin-top: 0;
+    font-size: 85%;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.text-muted {
+    color: #666!important;
+}
+
+.container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*Social elements*/
+.footer-social {
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.social li {
+    background: none repeat scroll 0 0 #B5B5B5;
+    border: 2px solid #B5B5B5;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 8px 0 0;
+    padding: 0;
+    text-align: center;
+    width: 36px;
+    transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+
+
+@media (min-width: 576px) {
+    .bd-footer {
+        text-align: center;
+    }
+}
 
 
 
