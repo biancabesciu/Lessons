@@ -1,3 +1,4 @@
+
 /*---------------------------------------------------------Home page--------------------------------------------------------------------*/
 body {
     margin: 0;
@@ -44,6 +45,7 @@ body {
     float: right;
     padding-right: 30px;
 }
+
 .button-group li {
     display: inline-block;
     padding-top: 3%;
@@ -54,14 +56,14 @@ body {
     color: #666;
     width: 7rem;
     padding: 20px 30px;
-    background-color: #aacedd;
+    background-color: #B5B5B5;
     text-decoration: none;
 }
 
 .button-group a:hover {
     color: #fff;
     padding: 20px 30px;
-    background-color: #666;
+    background-color: #2c3e50;
 }
 
 
@@ -141,7 +143,7 @@ body {
 }
 
 .bgImg-12 {
-    background-image: url("../img/04dfc031933151b28c6757d0324f584b.jpg");
+    background-image: url("../img/281fbd50af0530fad18e69fdc43df62f.jpeg");
     min-height: 600px;
 }
 
@@ -194,24 +196,8 @@ body {
     font-size: 22px;
 }
 
-h3 {
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font: 20px "Lato", sans-serif;
-    color: #111;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgImg-1, .bgImg-2, .bgImg-3 {
-        background-attachment: scroll;
-    }
-}
-
-
 /*Styling footer*/
-
-.footer-social {
+.footer{
     display: block;
     padding: 4rem 0;
     margin-top: 0;
@@ -232,10 +218,27 @@ h3 {
     padding-left: 15px;
 }
 
+.footer-social ul {
+    font-size: 13px;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 15px;
+    color: #7F8C8D;
+}
+
+.footer-social ul li a {
+    padding: 0 0 5px 0;
+}
+.footer-social a {
+    color: #78828D
+}
+
 /*Social elements*/
 .footer-social {
     padding-left: 0;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .social li {
@@ -244,38 +247,54 @@ h3 {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    float: left;
     height: 36px;
     line-height: 36px;
     margin: 0 8px 0 0;
     padding: 0;
+    display: inline-block;
     text-align: center;
     width: 36px;
     transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     -webkit-transition: all 0.5s ease 0s;
-
-
-@media (min-width: 576px) {
-    .bd-footer {
-        text-align: center;
-    }
 }
 
+/*When hover buttons will rotate*/
+.social li:hover {
+    transform: scale(1.15) rotate(360deg);
+    -webkit-transform: scale(1.1) rotate(360deg);
+    -moz-transform: scale(1.1) rotate(360deg);
+    -ms-transform: scale(1.1) rotate(360deg);
+    -o-transform: scale(1.1) rotate(360deg);
+}
 
+.social li a {
+    color: #EDEFF1;
+}
 
+.social li:hover {
+    border: 2px solid #2c3e50;
+    background: #2c3e50;
+}
 
+.social li a i {
+    font-size: 16px;
+    color: #EDEFF1 !important;
+}
 
-
-
-
-
-
-
-
-
-
-
+/*Styling copywrite & payment section*/
+.footer-bottom {
+    background: #E3E3E3;
+    border-top: 1px solid #DDDDDD;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer-bottom p.pull-left {
+    padding-top: 6px;
+}
+.payments {
+    font-size: 1.5em;
+}
 
 /*--------------------------------------------------------Donation page------------------------------------------------------------------*/
 
@@ -331,11 +350,57 @@ input[type="radio"], input[type="checkbox"]{
     cursor: pointer;
 }
 
-.donationPage .error {
+.personal-details .error {
     display: none;
     color: #ff0000;
 }
 
 .asterisk{
     color: #ff0000;
+}
+
+/*****************************************************************************************************************************************/
+/*Media queries
+Iphone Plus 6, Iphone 5 portrait & landscape*/
+@media only screen
+and (max-device-width : 736px)
+and (min-device-width : 320px) {
+
+    /*.bgImg-1, .footer-bottom {*/
+        /*margin-right: -7px;*/
+    /*}*/
+
+    .inner-text #1{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 33px;
+    }
+    /*Making the caption size smaller*/
+    .caption .subtitle {
+        font-size: 21px;
+    }
+
+    /*Navigation bar centered*/
+    .button-group, .homePage {
+        width: 390px;
+        height: 89px;
+        padding-left: 93px;
+        padding-right: 0;
+    }
+
+    .button-group a {
+        padding: 10px 20px;
+    }
+
+    .fa-2x {
+        font-size: 1.7em;
+    }
+
+
+    /*Footer payments won't display*/
+    .payments {
+        display: none;
+    }
 }
