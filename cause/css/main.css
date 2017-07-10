@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     z-index: 0;
+    font-family: "Lato", sans-serif;
 }
 
 
@@ -301,7 +302,7 @@ body {
 
 /*--------------------------------------------------------About page --------------------------------------------------------------------*/
 
-/*Styling header*/
+/***********Styling header**************/
 
 /*background img*/
 .header-about {
@@ -374,7 +375,107 @@ body {
     color: rgba(255, 255, 255, 1);
 }
 
+/********Styling content********/
+.plastic-pollution {
+    width: 100%;
+}
 
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4 {
+   color: #ee5746;
+}
+
+.img-center {
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*Img gallery .main */
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+div.gallery img.img1{
+    padding-bottom: 6px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+/*Section nav*/
+/*making the columns*/
+#section-nav {
+    color: #4d4d4d;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .section-two {
+        flex-direction: row;
+    }
+}
+
+.section-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#section-nav div {
+    padding-left: 0;
+    padding-right: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+#section-nav h4 {
+    color: #45576b;
+    font-weight: bold;
+    transition: all ease-in-out 600ms;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ee5746;
+    display: block;
+    width: 100%;
+}
+
+#section-nav .section-image {
+    max-width: 150px;
+}
+
+#section-nav img {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: all ease-in-out 600ms;
+}
 
 
 
