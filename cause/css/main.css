@@ -557,6 +557,79 @@ div.desc {
     margin-bottom: 20px;
 }
 
+/*donation details making the one time-monthly slide*/
+.switch {
+    position: absolute;
+    top: 145px;
+    left: 20px;
+    margin: 20px auto;
+    height: 26px;
+    width: 58.5%;
+    background: white;
+    border-radius: 3px;
+}
+
+.switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 49%;
+    line-height: 26px;
+    font-size: 11px;
+    color: #5C5C5C;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switch-label:active {
+    font-weight: bold;
+}
+
+.switch-label-off {
+    padding-left: 2px;
+}
+
+.switch-label-on {
+    padding-right: 2px;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-input:checked + .switch-label {
+    font-weight: bold;
+    color: #fff;
+
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+    transition: 0.15s ease-out;
+}
+
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+    left: 247px;
+}
+
+.switch-selection {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    width: 49%;
+    height: 22px;
+    border-radius: 3px;
+    background-color: #1b6d85;
+
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+}
+
+
 /*styling donation-details label*/
 input[type="radio"], input[type="checkbox"]{
     margin-left: 20px;
@@ -567,6 +640,10 @@ input[type="radio"], input[type="checkbox"]{
 }
 
 /*styling personal-details*/
+.personal-details {
+    margin-top: 69px;
+}
+
 .personal-details label,
 .personal-details input,
 .personal-details button {
@@ -574,6 +651,10 @@ input[type="radio"], input[type="checkbox"]{
     margin-bottom: 3px;
     display: block;
     width: 100%;
+}
+
+label {
+    margin-bottom: 30px;
 }
 
 .personal-details input {
@@ -588,21 +669,26 @@ input[type="radio"], input[type="checkbox"]{
 }
 
 .personal-details button {
-    width: 20%;
-    height: 30px;
+    width: 15%;
     line-height: 30px;
     background: #1b6d85;
     color: #fff;
     margin-top: 10px;
-    margin-bottom: 13px;
-    margin-left: 300px;
+    margin-left: 343px;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.personal-details .error {
+.personal-details .error,
+.donation-details .error {
     display: none;
+    padding-top: 10px;
     color: #ff0000;
+}
+
+.switch.chosenAmount {
+    padding-top: 20px;
+    color: #000;
 }
 
 .asterisk{
@@ -650,6 +736,10 @@ and (min-device-width : 320px) {
 
     .fa-2x {
         font-size: 1.7em;
+    }
+
+    .switch-input:checked + .switch-label-on ~ .switch-selection {
+        left: 164px;
     }
 
     /*About page - gallery img*/

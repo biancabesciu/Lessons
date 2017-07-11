@@ -1,7 +1,7 @@
 // Donation page form validation ---------------------------------------->
 
 //Donation radio buttons
-//Validate radio buttons
+//Validate radio buttons amount
 function validateRadio() {
     const radioChecked = document.querySelector('input[name="amount"]:checked');
 
@@ -14,6 +14,21 @@ function validateRadio() {
         //show error prompt
         document.getElementById('radio-error').style.display = "block";
         return false;
+    }
+}
+
+//Validate radio buttons switch
+function validateSwitch () {
+    const radioChecked = document.querySelector('input[name="amount"]:checked');
+    const radioOneTime = document.getElementById('one-time');
+    const radioMonthly = document.getElementById('monthly');
+
+    if (radioOneTime) {
+        document.getElementById('radio-answer').innerHTML = "You chose to donate " + radioChecked.value + " € " + radioOneTime.value;
+    }
+
+    if (radioMonthly) {
+        document.getElementById('radio-answer').innerHTML = "You chose to donate " + radioChecked.value + " € " + radioMonthly.value;
     }
 }
 
@@ -90,6 +105,7 @@ function validateForm() {
 
     //Set error catcher
     let error = 0;
+    let answer = 0;
 
     // Validate radio buttons
     if(!validateRadio(document.querySelector('input[name="amount"]'))) {
