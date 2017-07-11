@@ -1,6 +1,7 @@
 
 /*---------------------------------------------------------Home page--------------------------------------------------------------------*/
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
     z-index: 0;
@@ -90,6 +91,7 @@ body {
 
 .bgImg-1 {
     background-image: url("../img/img1.jpeg");
+    width: 100%;
     min-height: 703px;
 }
 
@@ -183,20 +185,24 @@ body {
 }
 
 .inner-text {
-    width: 700px;
+    position: relative;
+    display: block;
+    width: 100%;
     height: 200px;
-    margin: 0 200px 0;
+    margin:0;
     padding: 20px;
     text-align: center;
 }
 
 .inner-text p {
-    width: 700px;
     height: 109px;
-    padding-left: 85px;
     font-weight: 400;
     text-align: center;
     font-size: 22px;
+}
+
+#1 {
+    margin: 40px;
 }
 
 /*Styling footer*/
@@ -406,10 +412,11 @@ h4 {
 .container {
     padding-left: 40px;
 }
+
 div.gallery {
     margin: 5px;
     float: left;
-    width: 350px;
+    width: 31%;
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -606,7 +613,7 @@ input[type="radio"], input[type="checkbox"]{
 /*Media queries
 Iphone Plus 6, Iphone 5 portrait*/
 @media only screen
-and (max-device-width : 736px)
+and (max-device-width : 776px)
 and (min-device-width : 320px) {
 
     /*Turn off parallax scroll*/
@@ -615,11 +622,14 @@ and (min-device-width : 320px) {
     }
 
     .inner-text {
+        height: 225px;
+    }
+
+    .inner-text p{
         width: 100%;
-        height: 100px;
+        height: 109px;
+        display: block;
         text-align: center;
-        margin-top: 0;
-        padding-top: 33px;
     }
     /*Making the caption size smaller*/
     .caption .subtitle {
@@ -630,7 +640,7 @@ and (min-device-width : 320px) {
     .button-group, .homePage {
         width: 390px;
         height: 89px;
-        padding-left: 93px;
+        padding-left: 81px;
         padding-right: 0;
     }
 
@@ -642,6 +652,10 @@ and (min-device-width : 320px) {
         font-size: 1.7em;
     }
 
+    /*About page - gallery img*/
+    div.gallery img.img3 {
+        padding-bottom: 18px;
+    }
 
     /*Footer payments won't display*/
     .payments {
