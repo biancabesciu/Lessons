@@ -23,11 +23,9 @@ function validateSwitch () {
     const radioOneTime = document.getElementById('one-time');
     const radioMonthly = document.getElementById('monthly');
 
-    if (radioOneTime) {
+    if (document.querySelector('input[id="one-time"]:checked')) {
         document.getElementById('radio-answer').innerHTML = "You chose to donate " + radioChecked.value + " € " + radioOneTime.value;
-    }
-
-    if (radioMonthly) {
+    } else {
         document.getElementById('radio-answer').innerHTML = "You chose to donate " + radioChecked.value + " € " + radioMonthly.value;
     }
 }
