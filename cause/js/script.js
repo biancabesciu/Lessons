@@ -5,6 +5,7 @@
 function validateRadio() {
     const radioChecked = document.querySelector('input[name="amount"]:checked');
 
+    validateSwitch();
     if (radioChecked) {
 
         //hide error prompt
@@ -18,12 +19,15 @@ function validateRadio() {
 }
 
 //Validate radio buttons switch
-function validateSwitch(selected_id) {
+function validateSwitch() {
     const radioChecked = document.querySelector('input[name="amount"]:checked');
+    const radioSwitchId = document.querySelector('input[name="view"]:checked').id;
+
 
     if (radioChecked) {
-        document.getElementById('switch').className = selected_id;
-        document.getElementById('radio-answer').innerHTML = "You chose to donate " + radioChecked.value + " € " + selected_id;
+        document.getElementById('switch').className = radioSwitchId;
+        document.getElementById('radio-answer').innerHTML = "You chose to donate " + radioChecked.value + " € " + radioSwitchId;
+        document.getElementById('radio-answer').style.color = "";
     } else {
         document.getElementById('radio-answer').innerHTML = "Please chose an amount";
         document.getElementById('radio-answer').style.color = "red";

@@ -92,23 +92,23 @@
                                     <label class="sr-only enter-amount">Make a donation</label>
                                     <h4>How much do you want to donate?</h4>
                                     <br>
-                                    <input type="radio" id="moneyValue1" name="amount" value="10" onblur="validateRadio('name')">
+                                    <input type="radio" id="moneyValue1" name="amount" value="10" onclick="validateRadio()">
                                     <label for="moneyValue1">10
                                         <i class="fa fa-eur" aria-hidden="true"></i>
                                     </label>
-                                    <input type="radio" id="moneyValue2" name="amount"  value="15" onblur="validateRadio('name')">
+                                    <input type="radio" id="moneyValue2" name="amount" value="15" onclick="validateRadio()">
                                     <label for="moneyValue2">15
                                         <i class="fa fa-eur" aria-hidden="true"></i>
                                     </label>
-                                    <input type="radio" id="moneyValue3" name="amount" value="20" onblur="validateRadio('name')">
+                                    <input type="radio" id="moneyValue3" name="amount" value="20" onclick="validateRadio()">
                                     <label for="moneyValue3">20
                                         <i class="fa fa-eur" aria-hidden="true"></i>
                                     </label>
-                                    <input type="radio" id="moneyValue4" name="amount" value="50" onblur="validateRadio('name')">
+                                    <input type="radio" id="moneyValue4" name="amount" value="50" onclick="validateRadio()">
                                     <label for="moneyValue4">50
                                         <i class="fa fa-eur" aria-hidden="true"></i>
                                     </label>
-                                    <input type="radio" id="moneyValue5" name="amount" value="100" onblur="validateRadio('name')">
+                                    <input type="radio" id="moneyValue5" name="amount" value="100" onclick="validateRadio()">
                                     <label for="moneyValue5">100
                                         <i class="fa fa-eur" aria-hidden="true"></i>
                                     </label>
@@ -116,9 +116,9 @@
 
 
                                     <div id="switch" class="switch monthly one-time">
-                                        <input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="" onclick="validateSwitch(this.id)">
+                                        <input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="" onclick="validateSwitch()">
                                         <label for="one-time" class="switch-label switch-label-off">One-Time</label>
-                                        <input type="radio" class="switch-input" name="view" value="Monthly" id="monthly" onclick="validateSwitch(this.id)">
+                                        <input type="radio" class="switch-input" name="view" value="Monthly" id="monthly" onclick="validateSwitch()">
                                         <label for="monthly" class="switch-label switch-label-on">Monthly</label>
                                         <span class="switch-selection"></span>
                                         <span id="radio-answer" class="chosenAmount"></span>
@@ -130,7 +130,7 @@
                                         <label for="name">Name
                                             <span class="asterisk" aria-hidden="true">*</span>
                                          </label>
-                                        <input type="text" name="name" id="name" value="" onblur="validateName('name')">
+                                        <input type="text" name="name" id="name" value="" onblur="validateName()">
                                         <span id="name-error" style="display: none" class="error">You can only use alphabetic characters, hyphens and apostrophes</span>
                                         <br class="clearing">
 
@@ -144,7 +144,7 @@
                                         <label for="country">Country
                                             <span class="asterisk" aria-hidden="true">*</span>
                                         </label>
-                                        <select name="country" id="country" class="form-control" onblur="validateSelect('name')">
+                                        <select name="country" id="country" class="form-control" onblur="validateSelect()">
                                             <option value="Nl">Netherlands</option>
                                             <option value="Ro">Romania</option>
                                             <option value="Uk">United Kingdom</option>
