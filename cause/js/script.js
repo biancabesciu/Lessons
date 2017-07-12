@@ -18,15 +18,15 @@ function validateRadio() {
 }
 
 //Validate radio buttons switch
-function validateSwitch () {
+function validateSwitch(selected_id) {
     const radioChecked = document.querySelector('input[name="amount"]:checked');
-    const radioOneTime = document.getElementById('one-time');
-    const radioMonthly = document.getElementById('monthly');
 
-    if (document.querySelector('input[id="one-time"]:checked')) {
-        document.getElementById('radio-answer').innerHTML = "You chose to donate " + radioChecked.value + " € " + radioOneTime.value;
+    if (radioChecked) {
+        document.getElementById('switch').className = selected_id;
+        document.getElementById('radio-answer').innerHTML = "You chose to donate " + radioChecked.value + " € " + selected_id;
     } else {
-        document.getElementById('radio-answer').innerHTML = "You chose to donate " + radioChecked.value + " € " + radioMonthly.value;
+        document.getElementById('radio-answer').innerHTML = "Please chose an amount";
+        document.getElementById('radio-answer').style.color = "red";
     }
 }
 

@@ -115,10 +115,10 @@
                                     <span id="radio-error" style="display: none" class="error">Please choose an amount</span>
 
 
-                                    <div class="switch">
-                                        <input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="" onclick="validateSwitch('name')">
+                                    <div id="switch" class="switch monthly one-time">
+                                        <input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="" onclick="validateSwitch(this.id)">
                                         <label for="one-time" class="switch-label switch-label-off">One-Time</label>
-                                        <input type="radio" class="switch-input" name="view" value="Monthly" id="monthly" onclick="validateSwitch('name')">
+                                        <input type="radio" class="switch-input" name="view" value="Monthly" id="monthly" onclick="validateSwitch(this.id)">
                                         <label for="monthly" class="switch-label switch-label-on">Monthly</label>
                                         <span class="switch-selection"></span>
                                         <span id="radio-answer" class="chosenAmount"></span>

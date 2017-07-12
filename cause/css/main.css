@@ -558,7 +558,7 @@ div.desc {
 }
 
 /*donation details making the one time-monthly slide*/
-.switch {
+.switch, .monthly, .one-time  {
     position: absolute;
     top: 145px;
     left: 20px;
