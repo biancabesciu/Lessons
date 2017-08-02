@@ -1,0 +1,40 @@
+body {
+    font-family: 'helvetica', 'arial', sans-serif;
+    color: white;
+}
+
+.interface {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+/*changing btn style*/
+.btn.btn-info {
+    margin: 20px 0 20px 0;
+}
+
+.btn-info {
+    background-color: teal;
+    border-color: teal;
+    color: aliceblue;
+}
+
+.btn-info:hover {
+    background-color: indianred;
+    border-color: indianred;
+}
+
+/*hide btn*/
+.state2 {
+    display: none;
+}
+
+/*display this when function is called*/
+body.interface .state2 {
+    display: block;
+}
