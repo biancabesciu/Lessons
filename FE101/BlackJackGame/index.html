@@ -22,21 +22,25 @@
                 <h1>Lets' play Blackjack!</h1>
             </header>
 
-            <div id="cards">
+            <section id="cards">
+
                 <h2>My Cards</h2>
 
-                <div class="card"></div>
-                <div class="card"></div>
+                <figure class="card"></figure>
 
-            </div>
+                <figure class="card"></figure>
 
-            <div id="result"></div>
+            </section>
 
-            <div>
-                <button type="button" class="btn btn-info" id="deal">Play</button>
-                <button type="button" class="btn btn-info" id="hit">Hit me!</button>
-                <button type="button" class="btn btn-info">Stay</button>
-            </div>
+            <p id='result'></p>
+
+            <nav>
+                <ul>
+                    <li><button type="button" class="btn btn-info" id="deal">Play</button></li>
+                    <li><button type="button" class="btn btn-info" id="addCard">Hit Card</button></li>
+                    <li><button type="button" class="btn btn-info" id="score">Stay</button></li>
+                </ul>
+            </nav>
         </div>
 
 
