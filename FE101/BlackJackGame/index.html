@@ -17,27 +17,27 @@
     </head>
 
     <body>
-        <div class="interface">
-            <h1>Lets' play Blackjack!</h1>
-            <h2>Press button to start</h2>
+        <div class="main">
+            <header>
+                <h1>Lets' play Blackjack!</h1>
+            </header>
 
-            <div class="state1" id="play">
-                <button type="button" class="btn btn-info" onclick="deal()">Play</button>
-                <div id="yourCards"></div>
+            <div id="cards">
+                <h2>My Cards</h2>
+
+                <div class="card"></div>
+                <div class="card"></div>
+
             </div>
 
-            <div class="state2">
-                <button type="button" class="btn btn-info" onclick="Hit()">Hit me!</button>
-                <button type="button" class="btn btn-info" onclick="Stay()">Stay</button>
-            </div>
+            <div id="result"></div>
 
-            <div class="answers"></div>
+            <div>
+                <button type="button" class="btn btn-info" id="deal">Play</button>
+                <button type="button" class="btn btn-info" id="hit">Hit me!</button>
+                <button type="button" class="btn btn-info">Stay</button>
+            </div>
         </div>
-
-
-
-
-
 
 
         <script rel="script" src="script.js"></script>
