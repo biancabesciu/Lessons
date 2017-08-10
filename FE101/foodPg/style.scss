@@ -1,2 +1,58 @@
 $font-size: 1em;
-$font-family @import url('https://fonts.googleapis.com/css?family=Roboto');
+$body-font-family: 'Roboto', sans-serif;;
+$page-width: 80%;
+$headline-text-color: chocolate;
+$text-decoration: none;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+section {
+    font-family: $body-font-family;
+    max-width: $page-width;
+    margin: 0 auto;
+
+    h1 {
+        font-family: 2 * $font-size;
+        color: $headline-text-color;
+        text-align: center;
+        background-color: aqua;
+        transition: background-color 4s linear, width 4s;
+
+        &:hover {
+            background-color: aliceblue;
+        }
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    li {
+        text-decoration: $text-decoration;
+        list-style: none;
+    }
+
+    button {
+        margin: 20px;
+        text-align: center;
+        @include border-radius(5px);
+    }
+
+    .facebook {
+        @extend button;
+        transform: rotate ();
+        background-color: coral;
+    }
+
+    .instagram {
+        @extend button;
+        background-color: darkcyan;
+    }
+}
+
