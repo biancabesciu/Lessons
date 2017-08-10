@@ -1,63 +1,144 @@
+//global var
+let score = 0;
+let gameInProgress = false;
 
-let deck = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+const COWARD_THRESHOLD = 14;
+const WINNER = 21;
 
-let resultElement = document.getElementById('result');
-let cardDisplay = document.getElementById('cards');
+function changeScore(newScore) {
+    const scoreElement = document.getElementById('score');
 
-// add event listener for btn
-//when click start function
-document.getElementById('deal').addEventListener('click', deal);
-document.getElementById('addCard').addEventListener('click', addCard);
-document.getElementById('score').addEventListener('click', score);
-
-function deal() {
-    let currentCards = document.getElementsByClassName('card');
-
-
+    //change in HTML the scoreElement with newScore
+    scoreElement.innerHTML = newScore;
 }
 
-function addCard() {
-    let randomNumber = Math.floor(Math.random() * deck.length);
+function hit () {
+    //create new constant
+    //pass it the min of 1 and the max of 11
+    const newCard = getRandomIntInclusive(1, 11);
 
-    checkGameStatus();
-    return deck[randomNumber];
+    //add to the score the new value
+    score += newCard;
+
+    //changeScore by passing it score
+    changeScore(score);
 }
 
-//checking if the value is 21 or bigger
-function checkGameStatus() {
-    let currentCards = document.getElementsByClassName('card');
+function determinGameFinish () {
+    const resultDiv = document.getElementById('results');
+    let ourMessage = '';
 
-    let totalValue = 0;
+    //this is if we score less than our coward nr
+    if (score < COWARD_THRESHOLD) {
+        ourMessage = 'You only had ' + score;
 
-    for (let i = 0; i < currentCards.length; i++) {
-        totalValue = totalValue + getCardValue( currentCards[ i ] );
-    }
+    // we didn't hit 21, but we are close
+    } else if (score > COWARD_THRESHOLD && score < 21) {
+        ourMessage = 'Nice try - you got ' + score;
 
-    if ( totalValue === 21 ) {
-        result.innerText = 'BLACKJACK!';
-    } else if ( totalValue > 21 ) {
-        result.innerText = 'You Lose!';
-    }
-}
+    // we scored perfectly
+    } else if(score === 21) {
+        ourMessage = 'Amazing, you got a perfect result! '
 
-//give value to the face and ace cards
-function getCardValue(cardElement) {
-    let cardValue = 0;
-
-    if (cardElement.innerText === 'J' || cardElement.innerText === 'Q' || cardElement.innerText === 'K') {
-        cardValue = 10;
-
-    } else if (cardElement.innerText === 'A') {
-        cardValue = 11;
-
+    // the person has "Bust"
     } else {
-        cardValue = Number(cardElement.innerText);
-
+        ourMessage = 'You went over, you got ' + score;
     }
 
-    return cardValue;
+    //changing resulDiv with ourMessage
+    resultDiv.innerHTML = ourMessage;
 }
 
-function score() {
-    resultElement.innerText = 'Your score is ' +;
+function stay() {
+    const gameTable = document.getElementById('game-table');
+    const welcomeMessage = document.getElementById('play-button');
+
+    gameInProgress = false;
+
+    //make a new class
+    gameTable.className = 'hidden';
+    welcomeMessage.className = '';
+
+    const hitButton = document.getElementById('hit-button');
+    const stayButton = document.getElementById('stay-button');
+
+    //when clicked remove listner
+    hitButton.removeEventListener('click', hit);
+    stayButton.removeEventListener('click', stay);
+
+    const resultDiv = document.getElementById('results');
+    resultDiv.innerHTML = 'Your final score was ' + score;
+
+    determinGameFinish();
 }
+
+
+function newGame () {
+    const gameTable = document.getElementById('game-table');
+    const welcomeMessage = document.getElementById('play-button');
+
+    gameInProgress = true;
+
+    //make a new class
+    gameTable.className = '';
+    welcomeMessage.className = 'hidden';
+
+    //reset score back to 0 every time a new game starts
+    score = 0;
+
+    const hitButton = document.getElementById('hit-button');
+    const stayButton = document.getElementById('stay-button');
+
+    //when clicked start function
+    hitButton.addEventListener('click', hit);
+    stayButton.addEventListener('click', stay);
+
+    //reset score back to 0
+    changeScore(0);
+}
+
+function init() {
+    const playButton = document.getElementById('play-button');
+
+    //when clicked start newGame function
+    playButton.addEventListener('click', newGame);
+}
+
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+document.addEventListener('DOMContentLoaded', init);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
