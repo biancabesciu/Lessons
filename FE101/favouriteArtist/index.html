@@ -4,65 +4,87 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--Bootstrap-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <!--Bulma-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
 
         <!--My css-->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="compiled.css">
 
         <!--Page title-->
         <title>Favourite Music Band</title>
     </head>
 
     <body>
-        <header>
-            <nav>
-                <ul class="nav">
-                    <li id="music">Music</li>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#Page">Page</a></li>
-                </ul>
-            </nav>
+        <section class="header">
+                <nav class="menu">
+                    <div class="columns is-mobile">
+                        <div class="column has-text-left has-logo">
+                            <span class="logo"></span>
+                        </div> <!--closing txt left div-->
 
-            <div class="title">
-                <h1>I
-                    <img id="logo" src="img/heart.png" alt="heart"/>
-                    Music
-                </h1>
-                <p>...since 1988</p>
+                        <div class="column has-text-right">
+                            <ul class="is-hidden-mobile">
+                                <li><a href="#Home">Home</a></li>
+                                <li><a href="#Page">Page</a></li>
+                            </ul>
+                        </div> <!--closing txt right-->
+
+                        <!--Hamburger menu only visible on mobile version-->
+                        <button class="navbar-burger is-active is-void is-hidden-tablet">
+                            <span class="nav-toggle is-visible-mobile">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+
+                        <div class="mobile-menu">
+                            <ul>
+                                <li><a href="#Home">Home</a></li>
+                                <li><a href="#Page">Page</a></li>
+                            </ul>
+                        </div>
+                        <!--End hamburger menu-->
+
+                    </div> <!--closing is-mobile div-->
+                </nav>
+        </section>
+
+        <section class="container is-fullhd is-flex-mobile">
+
+            <div class="intro columns is-centered">
+                <h1 class="title">Favourite Band</h1>
+                <p class="info column is-7"><span>Muse</span> are an English rock band from Teignmouth, Devon, formed in 1994. The band consists of Matt Bellamy (lead vocals, guitar, piano, keyboards), Chris Wolstenholme (bass guitar, backing vocals, keyboards) and Dominic Howard (drums, percussion).</p>
             </div>
 
-            <div class="intro">
-                <p>I like different kinds of music. For instance, I like listening to <em>electronic dance</em> or <em>pop</em> music while going to gym. I find it easier to exercise, while having an alert rhythm. But most of all, I like listening to <span>rock, alternative rock & indie.</span></p>
-            </div>
-        </header>
-
-        <article>
-            <div class="content">
-                <p>List of favorite songs:</p>
-                <ul class="bands">
-                    <li>Muse</li>
-                    <li>Rammstein</li>
-                    <li>Franz Ferdinand</li>
-                    <li>Paramore</li>
-                    <li>Moloko</li>
+            <div class="content column is-5 is-offset-7">
+                <p>Favourite albums</p>
+                <ul class="albums">
+                    <li>Absolution (2003)</li>
+                    <li>Black Holes and Revelations (2006)</li>
                 </ul>
 
                 <p>Favorite songs:</p>
-                <ul class="songs">
-                    <li>Suppermasive Black Hole - Muse</li>
-                    <li>Starlight - Muse</li>
-                </ul>
-
-                <p>Concerts:</p>
-                <ul class="concerts">
-                    <li>
-                        <img src="img/Muse.jpg" alt="muse"/>
-                        <p> Muse</p>
-                    </li>
-                </ul>
+                <ol class="songs">
+                    <li>"Suppermasive Black Hole"</li>
+                    <li>"Starlight"</li>
+                    <li>"Knights of Cydonia"</li>
+                    <li>"Hysteria"</li>
+                    <li>"Mercy"</li>
+                    <li>"Madness"</li>
+                    <li>"Dead inside"</li>
+                </ol>
             </div>
-        </article>
+
+            <div class="images">
+                <p>In 2015, I finally got to see them in concert. They performed at the Rock Werchter festival.
+                    <img src="img/Muse.jpg" alt="muse"/>
+                </p>
+            </div>
+
+        </section>
 
     </body>
 

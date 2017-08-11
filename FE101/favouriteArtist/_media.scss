@@ -1,0 +1,29 @@
+$background-img-logo: url(/img/muse-vector-logo.png);
+
+@media screen and (min-width: 769px) {
+    .is-hidden-tablet {
+        display: none;
+    }
+
+    .columns:not(.is-desktop) {
+        display: flex;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .logo {
+        background-image: $background-img-logo;
+        background-size: 112px 26px;
+    }
+}
+
+
+@media only screen and (max-width: 979px) {
+    nav.menu {
+        ul {
+            li {
+                padding: 0 3px;
+            }
+        }
+    }
+}
