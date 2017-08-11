@@ -1,0 +1,12 @@
+body {
+  font-size: 3em; }
+
+section {
+  max-width: 80%;
+  margin: 0 auto; }
+  section h1 {
+    color: red; }
+  section p {
+    color: coral; }
+    section p span {
+      font-weight: bold; }
