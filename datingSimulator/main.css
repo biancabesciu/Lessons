@@ -1,0 +1,45 @@
+/*styling body*/
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+h4{
+    margin-bottom: 0;
+}
+/*styling wrapper*/
+.wrapper{
+    padding:20px;
+}
+
+/*styling input*/
+#firstName{
+    width: 200px;
+    height: 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #9E9E9E;
+    text-align: center;
+}
+
+/*styling button*/
+button{
+    width: 70px;
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 1px solid #2aabd2;
+    background-color: #1b6d85;
+    border-radius: 34px;
+    color: white;
+    text-align: center;
+}
+
+/*styling answer*/
+.answer{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+
