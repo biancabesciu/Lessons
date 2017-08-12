@@ -7,7 +7,7 @@
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .logo {
-    background-image: url(/img/muse-vector-logo.png);
+    background-image: url(img/muse-vector-logo.png);
     background-size: 112px 26px; } }
 
 @media only screen and (max-width: 979px) {
@@ -122,8 +122,39 @@ section.container {
       font-weight: bold; }
     section.container .content ul.albums {
       list-style: none; }
-  section.container .images {
-    padding-top: 40px; }
-    section.container .images p {
+  section.container .main-slider {
+    background: #eee;
+    padding: 20px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px; }
+    section.container .main-slider img {
+      height: 159px;
+      max-width: 24%;
+      margin-left: 21px; }
+    section.container .main-slider p {
       padding: 20px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      text-align: center; }
+    section.container .main-slider .video .fancybox-slide--video .fancybox-content {
+      width: 533px;
+      height: 300px;
+      max-width: 80%;
+      max-height: 80%;
+      margin: 0; }
+    section.container .main-slider .video ul {
+      padding: 20px;
+      text-align: center; }
+    section.container .main-slider .video a {
+      color: black; }
+  section.container .footer {
+    clear: both;
+    height: 68px;
+    border: 1px solid black;
+    background-color: black;
+    padding: 20px;
+    color: #f88f1a;
+    text-transform: uppercase;
+    font-weight: 700; }
+    section.container .footer p {
+      float: right;
+      padding: 0; }

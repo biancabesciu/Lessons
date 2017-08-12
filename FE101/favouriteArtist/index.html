@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
 
+        <!--fancyBoc-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.css">
+
         <!--My css-->
         <link rel="stylesheet" href="compiled.css">
 
@@ -78,15 +81,53 @@
                 </ol>
             </div>
 
-            <div class="images">
+            <div class="main-slider">
                 <p>
                     In 2015, I finally got to see them in concert. They performed at the Rock Werchter festival.
                 </p>
 
+                <a href="img/Rock-Werchter-2015.jpg" data-fancybox="images" data-caption="Rock Werchter grounds">
+                    <img src="img/thumbnailRock.jpg" />
+                </a>
+
+                <a href="img/Muse.jpg" data-fancybox="images" data-caption="Photo taken while in crowd">
+                    <img src="img/Musethumbnail.jpg" />
+                </a>
+
+                <a href="img/10931_original.jpg" data-fancybox="images" data-caption="Stage image">
+                    <img src="img/bandthumbnail.jpg" />
+                </a>
+
+                <a href="img/4060571206.jpg" data-fancybox="images" data-caption="Matt's solo">
+                    <img src="img/Mattthumbnail.jpg" />
+                </a>
+
+                <div class="video">
+                    <ul>
+                        <li>
+                            <i class="fa fa-youtube-play" aria-hidden="true">
+                                <a data-fancybox href="https://www.youtube.com/watch?v=uIrMOD5Va5c">
+                                Click to see video on Youtube
+                                </a>
+                            </i>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
+            <footer class="footer">
+                <p>© Favourite Band by bianca 2017
+                </p>
+            </footer>
 
         </section>
 
+        <!-- Add jQuery library -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Add fancyBox-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.js"></script>
+        <!--My Js-->
+        <script type="text/javascript" src="script.js"></script>
     </body>
 
 </html>
