@@ -1,5 +1,6 @@
 $background-img-container: url(img/cover.jpg);
 $font-size: 10px;
+$font-family: 'Open Sans Condensed', sans-serif;
 
 
 
@@ -52,7 +53,7 @@ section.container {
 
         .info {
             padding: 40px 18px 18px 18px;
-            font-family: 'Open Sans Condensed', sans-serif;
+            font-family: $font-family;
             font-size: 2 * $font-size;
             font-weight: 400;
             text-align: center;
@@ -63,26 +64,37 @@ section.container {
                 font-size: 2.3 * $font-size;
             }
         }
+    }
 
-        .content {
+    .content {
 
-            p {
-                margin: 20px;
-                padding-top: 20px;
-            }
+        font-family: $font-family;
+        font-size: 2 * $font-size;
+        font-weight: 400;
+
+        p {
+            font-weight: bold;
         }
 
-        ul {
+        ul.albums {
             list-style: none;
         }
     }
 
+
     .images {
-        padding-top: 149px;
+        padding-top: 40px;
 
         p {
             padding: 20px;
+            margin: 0 auto;
         }
+
+        img {
+            width: 70%;
+            height: 500px;
+        }
+
     }
 }
 
