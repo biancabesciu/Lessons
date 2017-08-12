@@ -8,6 +8,7 @@ $background-img-logo: url(img/muse-vector-logo.png);
     .columns:not(.is-desktop) {
         display: flex;
     }
+
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
@@ -26,4 +27,15 @@ $background-img-logo: url(img/muse-vector-logo.png);
             }
         }
     }
+
+    section.container {
+        .content {
+            p {
+                span.logo-rock {
+                    left: 458px;
+                }
+            }
+        }
+    }
+
 }

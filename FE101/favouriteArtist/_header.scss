@@ -1,6 +1,9 @@
 $background-img-logo: url(img/muse-vector-logo.png);
 $background-img-nav: url(img/header.jpg);
 
+@import 'media';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
@@ -14,6 +17,13 @@ $background-img-nav: url(img/header.jpg);
     -moz-transition: $transition;
     -o-transition: $transition;
     transition: $transition;
+}
+
+@mixin transform ($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
 }
 
 section.header {
@@ -45,7 +55,6 @@ section.header {
             outline: none;
             display: inline-block;
             @include border-radius (10px);
-            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
         ul {
@@ -59,8 +68,12 @@ section.header {
                 text-align: right;
                 @include transition (0.5s ease-in);
 
+                &:first-child {
+                    padding-left: 0;
+                }
+
                 &:hover {
-                    transform: scale(1.15);
+                    @include transform (scale(1.15));
                 }
 
                 a {
@@ -96,6 +109,18 @@ section.header {
             right: 0;
             display: flex;
             text-align: center;
+        }
+
+        button.hamburger {
+            height: 45px;
+        }
+
+        .is-void {
+            text-decoration: none;
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            outline: none;
         }
     }
 

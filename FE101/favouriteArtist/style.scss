@@ -1,4 +1,5 @@
 $background-img-container: url(img/cover.jpg);
+$logo-rock: url(img/rock-out-icon-614x460.png);
 $font-size: 10px;
 $font-family: 'Open Sans Condensed', sans-serif;
 
@@ -23,6 +24,13 @@ $font-family: 'Open Sans Condensed', sans-serif;
     transition: $transition;
 }
 
+@mixin transform ($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
 section.container {
     position: relative;
     width: 100%;
@@ -42,7 +50,7 @@ section.container {
             font-weight: 900;
             font-size: 4 * $font-size;
             color: #f88f1a;
-            transition: color 0.3s ease;
+            @include transition (color 0.3s ease);
 
 
             &:hover {
@@ -59,7 +67,7 @@ section.container {
             text-align: center;
             display: block;
 
-            span {
+            span#bold {
                 font-weight: 700;
                 font-size: 2.3 * $font-size;
             }
@@ -74,6 +82,25 @@ section.container {
 
         p {
             font-weight: bold;
+
+            span.logo-rock {
+                width: 66px;
+                height: 31px;
+                position: absolute;
+                left:679px;
+                background-image: $logo-rock;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border: none;
+                outline: none;
+                display: inline;
+                @include transition (all 0.5s ease 0s);
+
+                &:hover {
+                    @include transform(scale(1.15) rotate(360deg));
+                }
+            }
         }
 
         ul.albums {

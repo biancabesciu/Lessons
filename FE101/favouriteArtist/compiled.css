@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
 @media screen and (min-width: 769px) {
   .is-hidden-tablet {
     display: none; }
@@ -12,7 +13,26 @@
 
 @media only screen and (max-width: 979px) {
   nav.menu ul li {
-    padding: 0 3px; } }
+    padding: 0 3px; }
+  section.container .content p span.logo-rock {
+    left: 458px; } }
+
+@media screen and (min-width: 769px) {
+  .is-hidden-tablet {
+    display: none; }
+  .columns:not(.is-desktop) {
+    display: flex; } }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .logo {
+    background-image: url(img/muse-vector-logo.png);
+    background-size: 112px 26px; } }
+
+@media only screen and (max-width: 979px) {
+  nav.menu ul li {
+    padding: 0 3px; }
+  section.container .content p span.logo-rock {
+    left: 458px; } }
 
 section.header {
   background-image: url(img/header.jpg);
@@ -43,8 +63,7 @@ section.header {
       -moz-border-radius: 10px;
       -ms-border-radius: 10px;
       -o-border-radius: 10px;
-      border-radius: 10px;
-      transition: background-color 0.3s, box-shadow 0.3s; }
+      border-radius: 10px; }
     section.header nav.menu ul {
       margin: 9px 10% 0 auto; }
       section.header nav.menu ul li {
@@ -57,7 +76,12 @@ section.header {
         -moz-transition: 0.5s ease-in;
         -o-transition: 0.5s ease-in;
         transition: 0.5s ease-in; }
+        section.header nav.menu ul li:first-child {
+          padding-left: 0; }
         section.header nav.menu ul li:hover {
+          -webkit-transform: scale(1.15);
+          -moz-transform: scale(1.15);
+          -o-transform: scale(1.15);
           transform: scale(1.15); }
         section.header nav.menu ul li a {
           color: black;
@@ -83,6 +107,14 @@ section.header {
       right: 0;
       display: flex;
       text-align: center; }
+    section.header nav.menu button.hamburger {
+      height: 45px; }
+    section.header nav.menu .is-void {
+      text-decoration: none;
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      outline: none; }
 
 section.container {
   position: relative;
@@ -100,6 +132,9 @@ section.container {
     font-weight: 900;
     font-size: 40px;
     color: #f88f1a;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
     transition: color 0.3s ease; }
     section.container .intro h1:hover {
       color: black;
@@ -111,7 +146,7 @@ section.container {
     font-weight: 400;
     text-align: center;
     display: block; }
-    section.container .intro .info span {
+    section.container .intro .info span#bold {
       font-weight: 700;
       font-size: 23px; }
   section.container .content {
@@ -120,6 +155,27 @@ section.container {
     font-weight: 400; }
     section.container .content p {
       font-weight: bold; }
+      section.container .content p span.logo-rock {
+        width: 66px;
+        height: 31px;
+        position: absolute;
+        left: 679px;
+        background-image: url(img/rock-out-icon-614x460.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        outline: none;
+        display: inline;
+        -webkit-transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s; }
+        section.container .content p span.logo-rock:hover {
+          -webkit-transform: scale(1.15) rotate(360deg);
+          -moz-transform: scale(1.15) rotate(360deg);
+          -o-transform: scale(1.15) rotate(360deg);
+          transform: scale(1.15) rotate(360deg); }
     section.container .content ul.albums {
       list-style: none; }
   section.container .main-slider {
